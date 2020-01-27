@@ -14,7 +14,9 @@
     },
     "parserOptions": {
         "ecmaFeatures": {
-            "jsx": true
+            "jsx": true,
+            "modules": true,
+            "experimentalObjectRestSpread": true
         },
         "ecmaVersion": 2018,
         "sourceType": "module"
@@ -23,5 +25,11 @@
         "react"
     ],
     "rules": {
-    }
+        "no-shadow": "off",
+        "no-param-reassign": "off",
+        "eol-last": "off",
+        "arrow-parens": "off",
+        "import/no-unresolved": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+      }
 }
