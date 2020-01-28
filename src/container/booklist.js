@@ -21,9 +21,9 @@ const BookList = props => {
   );
 };
 
-const mapStateToProps = state => {
-  state.book,
-};
+const mapStateToProps = state => ({
+  book: state.book,
+});
 
 
 BookList.propTypes = {
