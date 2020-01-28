@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import BookList from './component/booklist';
+import BookList from '../container/booklist';
 import BooksForm from './component/BooksForm';
 
 function App() {
