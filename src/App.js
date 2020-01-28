@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import BooksList from './components/BooksList';
-import BooksForm from './components/BooksForm';
+import BookList from './component/booklist';
+import BooksForm from './component/BooksForm';
 
 function App() {
   return (
     <div className="App">
-      <BooksList />
+      <BookList />
       <BooksForm />
     </div>
   );

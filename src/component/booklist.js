@@ -2,9 +2,16 @@ import React from 'react';
 
 const BookList = () => (
   // design a table.
-  <div className="row">
-    <div className="column" />
-    <div className="column" />
+  <div className="main">
+    <h1>Bookstore</h1>
+    <table>
+      <thead>
+        <th>Book name</th>
+        <th>Book category</th>
+      </thead>
+      <tbody>{rows}</tbody>
+    </table>
+
   </div>
 );
 
