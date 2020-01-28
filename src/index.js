@@ -8,12 +8,12 @@ import rootReducer from './reducers/index';
 const BOOKS = {
   books: [
     {
-      id: '0',
+      id: 0,
       title: 'Test One',
       category: 'Sci-Fi',
     },
     {
-      id: '1',
+      id: 1,
       title: 'Test Two',
       category: 'Fantasy',
     },

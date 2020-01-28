@@ -10,11 +10,13 @@ const BookList = props => {
       <h1>Bookstore</h1>
       <table className="table">
         <thead className="thead-dark">
-          <th scope="col">Id</th>
-          <th scope="col">Title</th>
-          <th scope="col">Category</th>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+            <th scope="col">Category</th>
+          </tr>
         </thead>
-        <tbody>{books.map(book => <Book key={book.Id} book={book} />)}</tbody>
+        <tbody>{books.map(book => <Book key={book.id} book={book} />)}</tbody>
       </table>
 
     </div>
@@ -29,7 +31,7 @@ const mapStateToProps = state => ({
 BookList.propTypes = {
   books: PropTypes.arrayOf(
     PropTypes.shape({
-      Id: PropTypes.string,
+      Id: PropTypes.number,
       Title: PropTypes.string,
       Category: PropTypes.string,
     }).isRequired,
