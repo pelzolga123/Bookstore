@@ -6,11 +6,11 @@ const BookList = props => {
   return (
     <div className="main">
       <h1>Bookstore</h1>
-      <table>
-        <thead>
-          <th>Id</th>
-          <th>Title</th>
-          <th>Category</th>
+      <table className="table">
+        <thead className="thead-dark">
+          <th scope="col">Id</th>
+          <th scope="col">Title</th>
+          <th scope="col">Category</th>
         </thead>
         <tbody>{book}</tbody>
       </table>

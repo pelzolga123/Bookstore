@@ -5,10 +5,10 @@ const options = category.map(item => <option key={item}>{item}</option>);
 
 const BooksForm = () => (
   <div>
-    <form>
-      <input type="text" placeholder="Title" />
-      <select>{options}</select>
-      <button type="submit">Add Book</button>
+    <form className="input-group">
+      <input className="w-50" type="text" placeholder="Title" />
+      <select className="custom-select ml-3">{options}</select>
+      <button type="submit" className="btn btn-primary ml-2">Add Book</button>
     </form>
   </div>
 );
