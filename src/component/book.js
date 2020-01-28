@@ -1,21 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = props => {
-  const { id, title, category } = props;
-  return (
-    <tbody>
-      <th scope="col">{id}</th>
-      <th scope="col">{title}</th>
-      <th scope="col">{category}</th>
-    </tbody>
-  );
-};
+const Book = ({ book }) => (
+
+  <tbody>
+    <th scope="col">{book.id}</th>
+    <th scope="col">{book.title}</th>
+    <th scope="col">{book.category}</th>
+  </tbody>
+);
+
 
 Book.propTypes = {
-  id: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
+  book: PropTypes.exact({
+    id: PropTypes.number,
+    title: PropTypes.string,
+    category: PropTypes.string,
+  }).isRequired,
 };
 
 export default Book;

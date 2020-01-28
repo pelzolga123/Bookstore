@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import Book from '../component/book';
 
 const BookList = props => {
-  const { book } = props;
+  const { books } = props;
   return (
     <div className="main">
       <h1>Bookstore</h1>
@@ -15,7 +15,7 @@ const BookList = props => {
           <th scope="col">Title</th>
           <th scope="col">Category</th>
         </thead>
-        <tbody>{book.map(book => <Book key={book.Id} book={book} />)}</tbody>
+        <tbody>{books.map(book => <Book key={book.Id} book={book} />)}</tbody>
       </table>
 
     </div>
@@ -23,12 +23,12 @@ const BookList = props => {
 };
 
 const mapStateToProps = state => ({
-  book: state.book,
+  books: state.books,
 });
 
 
 BookList.propTypes = {
-  book: PropTypes.arrayOf(
+  books: PropTypes.arrayOf(
     PropTypes.shape({
       Id: PropTypes.string,
       Title: PropTypes.string,
