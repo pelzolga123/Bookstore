@@ -2,14 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Book = ({ book }) => (
-
-  <tbody>
+  <tr>
     <th scope="col">{book.id}</th>
     <th scope="col">{book.title}</th>
     <th scope="col">{book.category}</th>
-  </tbody>
+  </tr>
 );
-
 
 Book.propTypes = {
   book: PropTypes.exact({
