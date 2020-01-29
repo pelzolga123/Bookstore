@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import Book from '../component/book';
 import { removeBook } from '../actions/index';
 
-class BookList extends React.Component() {
+class BookList extends React.Component {
   constructor(props) {
     super(props);
     this.handleBookRemove = this.handleBookRemove.bind(this);
@@ -29,7 +29,7 @@ class BookList extends React.Component() {
               <th scope="col">Category</th>
             </tr>
           </thead>
-          <tbody>{books.map(book => <Book handleBookRemove={() => this.handleRemoveBook(book)} key={book.id} book={book} />)}</tbody>
+          <tbody>{books.map(book => (<Book key={book.id} book={book} handleBookRemove={() => this.handleBookRemove(book)} />))}</tbody>
         </table>
       </div>
     );
