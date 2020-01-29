@@ -3,10 +3,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../component/book';
-import { removeBook } from '../actions/index';
+import { removeBook } from '../actions';
 
-class BookList extends React.Component {
-  constructor(props) {
+const BookList = ({ books, removeBook }) => (
+/* constructor(props) {
     super(props);
     this.handleBookRemove = this.handleBookRemove.bind(this);
   }
@@ -14,27 +14,27 @@ class BookList extends React.Component {
   handleBookRemove(book) {
     const { removeBook } = this.props;
     removeBook(book);
-  }
+  } */
 
-  render() {
-    const { books } = this.props;
-    return (
-      <div className="main">
-        <h1>Bookstore</h1>
-        <table className="table">
-          <thead className="thead-dark">
-            <tr>
-              <th scope="col">Id</th>
-              <th scope="col">Title</th>
-              <th scope="col">Category</th>
-            </tr>
-          </thead>
-          <tbody>{books.map(book => (<Book key={book.id} book={book} handleBookRemove={() => this.handleBookRemove(book)} />))}</tbody>
-        </table>
-      </div>
-    );
-  }
-}
+  // render() {
+// const { books } = this.props;
+  (
+    <div className="main">
+      <h1>Bookstore</h1>
+      <table className="table">
+        <thead className="thead-dark">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+            <th scope="col">Category</th>
+          </tr>
+        </thead>
+        <tbody>{books.map(book => (<Book key={book.id} book={book} removeBook={removeBook} />))}</tbody>
+      </table>
+    </div>
+  )
+  // }
+);
 
 const mapStateToProps = state => ({
   books: state.books,
@@ -52,7 +52,7 @@ BookList.propTypes = {
       Category: PropTypes.string,
     }).isRequired,
   ).isRequired,
-  removeBook: PropTypes.instanceOf(Function).isRequired,
+  removeBook: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(BookList);

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Book = ({ book, removeBook }) => {
-  const handleRemoveBook = () => removeBook(book.id);
+  const handleRemoveBook = () => removeBook(book);
   return (
     <tr>
       <th scope="col">{book.id}</th>
