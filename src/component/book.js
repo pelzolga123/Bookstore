@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = ({ book, removeBook }) => {
-  const handleRemoveBook = () => removeBook(book);
+const Book = ({ book, handleRemoveBook }) => {
+  //const handleRemoveBook = () => removeBook(book);
   return (
     <tr>
       <th scope="col">{book.id}</th>
@@ -21,7 +21,7 @@ Book.propTypes = {
     title: PropTypes.string,
     category: PropTypes.string,
   }).isRequired,
-  removeBook: PropTypes.func.isRequired,
+  handleRemoveBook: PropTypes.instanceOf(Function).isRequired,
 };
 
 export default Book;
