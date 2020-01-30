@@ -47,9 +47,9 @@ const mapDispatchToProps = dispatch => ({
 BookList.propTypes = {
   books: PropTypes.arrayOf(
     PropTypes.shape({
-      Id: PropTypes.number,
-      Title: PropTypes.string,
-      Category: PropTypes.string,
+      id: PropTypes.string,
+      title: PropTypes.string,
+      category: PropTypes.string,
     }).isRequired,
   ).isRequired,
   removeBook: PropTypes.func.isRequired,

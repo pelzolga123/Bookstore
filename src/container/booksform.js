@@ -27,9 +27,9 @@ class BooksForm extends React.Component {
 
   handleBookSubmit(e) {
     e.preventDefault();
-    const { title, category } = this.state;
     const { createBook } = this.props;
-    createBook(title, category);
+    const book = { ...this.state, id: Math.floor(Math.random() * 100) };
+    createBook(book);
     this.setState({
       title: '',
       category: 'Action',
@@ -40,7 +40,7 @@ class BooksForm extends React.Component {
     const { title, category } = this.state;
     return (
       <div>
-        <form className="input-group">
+        <form className="input-group" onSubmit={this.handleBookSubmit}>
           <input value={title} onChange={this.handleBookChange} className="w-50" type="text" placeholder="Title" />
           <select value={category} onChange={this.handleBookChange} className="custom-select ml-3">
             <option defaultValue>Choose...</option>

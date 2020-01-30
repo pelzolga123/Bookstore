@@ -1,8 +1,6 @@
 const createBook = book => ({
   type: 'CREATE_BOOK',
-  payload: book.id,
-  title: book.title,
-  category: book.category,
+  payload: book,
 });
 
 const removeBook = book => ({
