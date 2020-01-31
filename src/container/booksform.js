@@ -16,17 +16,12 @@ class BooksForm extends React.Component {
     };
     this.handleBookChange = this.handleBookChange.bind(this);
     this.handleBookSubmit = this.handleBookSubmit.bind(this);
-    this.handleTitleChange = this.handleTitleChange.bind(this);
   }
-
-  handleTitleChange(e) {
-    this.setState({ title: e.target.value });
-  }
-
 
   handleBookChange(e) {
+    const names = e.target.name;
     this.setState({
-      category: e.target.value,
+      [names]: e.target.value,
     });
   }
 
@@ -46,8 +41,8 @@ class BooksForm extends React.Component {
     return (
       <div>
         <form className="input-group" onSubmit={this.handleBookSubmit}>
-          <input value={title} onChange={this.handleTitleChange} className="w-50" type="text" placeholder="Title" />
-          <select value={category} onChange={this.handleBookChange} className="custom-select ml-3">
+          <input name="title" value={title} onChange={this.handleBookChange} className="w-50" type="text" placeholder="Title" />
+          <select name="category" value={category} onChange={this.handleBookChange} className="custom-select ml-3">
             <option defaultValue>Choose...</option>
             {options}
           </select>
