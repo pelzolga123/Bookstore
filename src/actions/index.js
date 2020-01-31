@@ -8,4 +8,9 @@ const removeBook = book => ({
   payload: book.id,
 });
 
-export { createBook, removeBook };
+const filterBook = filter => ({
+  type: 'FILTER_BOOK',
+  filter,
+});
+
+export { createBook, removeBook, filterBook };
