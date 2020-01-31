@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import options from '../helper/options';
 
-
-const category = ['Action', 'Classic', 'Drama', 'Fantasy', 'Sci-Fi', 'Legend'];
-const options = category.map(item => <option key={item} value={item}>{item}</option>);
 
 const CategoryFilter = props => {
-  const { handleBookChange } = props;
+  const { handleFilterChange } = props;
   return (
     <div>
-      <select onChange={handleBookChange} className="custom-select ml-3">
+      <select onChange={handleFilterChange} className="custom-select ml-3">
         <option value="All_Books">All Books</option>
         {options}
       </select>
@@ -19,7 +17,7 @@ const CategoryFilter = props => {
 
 
 CategoryFilter.propTypes = {
-  handleBookChange: PropTypes.func.isRequired,
+  handleFilterChange: PropTypes.func.isRequired,
 };
 
 export default CategoryFilter;
