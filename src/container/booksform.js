@@ -36,14 +36,15 @@ class BooksForm extends React.Component {
   render() {
     const { title, category } = this.state;
     return (
-      <div>
+      <div className="new-book">
+        <span> ADD NEW BOOK </span>
         <form className="input-group" onSubmit={this.handleBookSubmit}>
           <input name="title" value={title} onChange={this.handleBookChange} className="w-50" type="text" placeholder="Title" />
           <select name="category" value={category} onChange={this.handleBookChange} className="custom-select ml-3">
             <option defaultValue>Choose...</option>
             {options}
           </select>
-          <button type="submit" className="btn btn-primary ml-2">Add Book</button>
+          <button type="submit" className="btn btn-primary ml-2">ADD BOOK</button>
         </form>
       </div>
     );

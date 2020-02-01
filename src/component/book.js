@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Book = ({ book, handleRemoveBook }) => (
-  <tr>
-    <th scope="col">{book.id}</th>
-    <th scope="col">{book.title}</th>
-    <th scope="col">{book.category}</th>
-    <th>
+  <tr className="book-container">
+    <th className="book-category">{book.category}</th>
+    <th className="book-title">{book.title}</th>
+    <th className="remove-book">
       <button type="button" onClick={handleRemoveBook}>Remove Book</button>
     </th>
   </tr>

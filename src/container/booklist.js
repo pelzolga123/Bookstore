@@ -29,18 +29,18 @@ class BookList extends React.Component {
     const { books, filter } = this.props;
     return (
       <div className="main">
-        <h1>Bookstore</h1>
-        <div>
-          <CategoryFilter handleFilterChange={this.handleFilterChange} />
+        <div className="border-header">
+          <div className="outer-header">
+            <div className="header">
+              <h1 className="main-header">Bookstore CMS</h1>
+              <span>BOOKS</span>
+              <div>
+                <CategoryFilter handleFilterChange={this.handleFilterChange} />
+              </div>
+            </div>
+          </div>
         </div>
         <table className="table">
-          <thead className="thead-dark">
-            <tr>
-              <th scope="col">Id</th>
-              <th scope="col">Title</th>
-              <th scope="col">Category</th>
-            </tr>
-          </thead>
           <tbody>{filtered(books, filter).map(book => (<Book key={book.id} book={book} handleRemoveBook={() => this.handleRemoveBook(book)} />))}</tbody>
         </table>
       </div>
