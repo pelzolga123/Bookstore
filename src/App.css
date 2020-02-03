@@ -80,6 +80,7 @@ h1 {
     font-size: 22px;
     font-weight: 700;
     font-family: 'Roboto Slab', serif;
+    text-align: left;
 }
 .remove-book button{
     color: #4386bf;
@@ -128,3 +129,76 @@ form button{
     border: 1px solid #0290ff;
     font-weight: 700;
 }
+
+@media only screen and (max-width: 700px) {
+    body {
+        width: 100%;
+    }
+    .app, .main{
+        width: 100%;
+    }
+    tbody, .outer-header {
+        width: 90%;
+    }
+    .new-book{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .input-group{
+        flex-direction: column;
+    }
+    .input-group select{
+        width: 100%;
+        margin-bottom: 10px;
+    } 
+    .input-group input {
+        width: 100%;
+        padding: 13px 0;
+        margin-bottom: 10px;
+    }
+    .input-group button {
+        width: 100%;
+        padding: 15px 0; 
+    }
+    .main-header{
+        font-size: 25px;
+    }
+    .header{
+        display: block;
+        width: 90%;
+    }
+    .header span{
+        display: none;
+    }
+    .header div{
+        margin-bottom: 10px;
+    }
+    .book-title{
+        padding: 0 10px 0 0px;
+    }
+} 
+@media only screen and (min-width: 701px) and (max-width: 1200px) {
+    body {
+        width: 100%;
+    }
+    .app, .main{
+        width: 100%;
+    }
+    tbody, .outer-header {
+        width: 90%;
+    }
+    .new-book{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .main-header{
+        font-size: 25px;
+    }
+    .header{
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+    }
+} 
