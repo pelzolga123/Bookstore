@@ -39,7 +39,7 @@ class BooksForm extends React.Component {
       <div className="new-book">
         <span> ADD NEW BOOK </span>
         <form className="input-group" onSubmit={this.handleBookSubmit}>
-          <input name="title" value={title} onChange={this.handleBookChange} className="w-50" type="text" placeholder="Title" />
+          <input required name="title" value={title} onChange={this.handleBookChange} className="w-50" type="text" placeholder="Title" />
           <select name="category" value={category} onChange={this.handleBookChange} className="custom-select ml-3">
             <option defaultValue>Choose...</option>
             {options}
