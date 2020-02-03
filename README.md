@@ -1,7 +1,7 @@
 
 <h1 align="center">React&Redux Bookstore 👋</h1>
 
-<h1 align="center">This is a bookstore app built with React & Redux.</h1><br />
+<p align="center">This is a bookstore app built with React & Redux.</p><br />
 
 ![Bookstore Desktop version](https://user-images.githubusercontent.com/25479050/73641302-1ae94c80-4670-11ea-8933-ab6e6df2bcbc.gif)
 
