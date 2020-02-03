@@ -1,7 +1,204 @@
-.App{
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700,800|Open+Sans|Roboto+Slab:300,700&display=swap');
+body{
+    margin: 0;
+}
+tbody, .outer-header {
     display: flex;
     flex-direction: column;
     margin-right: auto;
     margin-left: auto;
-    width: 60%;
+    width: 1200px;
 }
+.table{
+    background-color:#fafafa;
+    display:block;
+}
+.main-header{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    color: #0290ff;
+    padding: 29px 0;
+}
+.border-header {
+    width: 100%;
+    border-bottom: 2px solid #e8e8e8;
+}
+.new-book{
+    border-top: 2px solid #e8e8e8;
+    margin-right: auto;
+    margin-left: auto;
+    width: 1200px;
+    padding: 29px 0;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    align-items: center;
+    justify-content: space-between;
+}
+h1 {
+    margin: 0;
+}
+
+.header span, select, option{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #121212;
+    font-size: 13px;
+    letter-spacing: 1.9px;
+
+}
+.header select {
+    opacity:0.5;
+    border: none;
+    background-color: #ffffff;
+}
+
+.table{
+    margin: 37px 0;
+}
+.book-container {
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    padding: 32px 0 28px 27px;
+}
+.book-category{
+    font-family: 'Montserrat', sans-serif;
+    opacity: 0.5;
+    color: #121212;
+    font-size: 14px;
+}
+.book-title{
+    color: #121212;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Roboto Slab', serif;
+    text-align: left;
+}
+.remove-book button{
+    color: #4386bf;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Roboto Slab', serif;
+    border: none;
+    background-color: #ffffff;
+    padding:15px 0 0 0;
+    cursor: pointer;
+}
+.new-book span{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color:#888888;
+    font-weight: 600;
+}
+.input-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 19px;
+}
+form input, select {
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+    padding: 13px;
+    font-family: 'Montserrat', sans-serif;
+    color: #c4c4c4;
+    font-size: 16px;
+    background-color: #ffffff;
+}
+form input{
+    width: 664px;
+}
+form select{
+    width: 285px;
+}
+form button{
+    width: 184px;
+    border-radius: 3px;
+    background-color: #0290ff;
+    color: #ffffff;
+    font-family: RobotoSlab;
+    font-size: 13px;
+    border: 1px solid #0290ff;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        width: 100%;
+    }
+    .app, .main{
+        width: 100%;
+    }
+    tbody, .outer-header {
+        width: 90%;
+    }
+    .new-book{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .input-group{
+        flex-direction: column;
+    }
+    .input-group select{
+        width: 100%;
+        margin-bottom: 10px;
+    } 
+    .input-group input {
+        width: 100%;
+        padding: 13px 0;
+        margin-bottom: 10px;
+    }
+    .input-group button {
+        width: 100%;
+        padding: 15px 0; 
+    }
+    .main-header{
+        font-size: 25px;
+    }
+    .header{
+        display: block;
+        width: 90%;
+    }
+    .header span{
+        display: none;
+    }
+    .header div{
+        margin-bottom: 10px;
+    }
+    .book-title{
+        padding: 0 10px 0 0px;
+    }
+} 
+@media only screen and (min-width: 701px) and (max-width: 1200px) {
+    body {
+        width: 100%;
+    }
+    .app, .main{
+        width: 100%;
+    }
+    tbody, .outer-header {
+        width: 90%;
+    }
+    .new-book{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .main-header{
+        font-size: 25px;
+    }
+    .header{
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+    }
+} 
