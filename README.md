@@ -56,7 +56,7 @@ $ npm run start
 
 👤 **Olga pelts**
    - Github: [@pelzolga123](https://github.com/pelzolga123)
-   - LinkedIn: [Olgapelz](https://www.linkedin.com/in/OlgaPelz/)
+   - LinkedIn: [Olgapelz](https://www.linkedin.com/in/olga-pelts/)
 
 👤 **Tunde Oretade**
    - Github: [@tundeiness](https://github.com/tundeiness)
